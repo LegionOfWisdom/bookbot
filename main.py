@@ -6,7 +6,12 @@ def get_book_text(filepath):
     return file_content
 
 def main():
-    content = get_book_text("/home/mbarrio/workspace/github.com/LegionOfWisdom/bookbot/books/frankenstein.txt")
-    print (content)
+    book_path = "/home/mbarrio/workspace/github.com/LegionOfWisdom/bookbot/books/frankenstein.txt"
+    num_words = 0
+    
+    content = get_book_text(book_path)
+    ttl_words = len(content.split())
+    
+    print (f"{ttl_words} words found in the document")
 
 main ()
