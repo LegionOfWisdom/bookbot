@@ -1,3 +1,9 @@
+import sys
+
+if len(sys.argv) == 1 or sys.argv[1] == "":
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+
 from stats import ( 
     get_num_words, 
     char_counter, 
@@ -5,7 +11,7 @@ from stats import (
 )
 
 def main():
-    book_path = "books/frankenstein.txt"
+    book_path = sys.argv[1]
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = char_counter(text)
